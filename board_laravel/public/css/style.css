@@ -1,0 +1,136 @@
+a {
+    text-decoration: none;
+
+}
+.link_box {
+    width: 500px;
+    height: 60px;
+    border: 3px solid #CE8484;
+    border-radius: 10px;
+    padding: 25px 40px;
+    margin: 15px auto;
+    color: #3B0B0B;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ex {
+    padding-left: 5px;
+}
+
+.btn-k {
+    font-weight: 400;
+    line-height: 100%;
+    color: #ffff;
+    text-align: center;
+    cursor: pointer;
+    background-color: #CE8484;
+    border: 1px solid #CE8484;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: -5px;
+}
+
+.textbox {
+    line-height: 100%;
+    font-weight: 400;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border: 1px solid #CE8484;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.search {
+display: flex;
+vertical-align: top;
+justify-content: right;
+margin: 50px 300px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    list-style: none;
+    min-width: 40px;
+    line-height: 42px;
+    justify-content: center;
+
+}
+
+.page {
+    border: 3px solid #CE8484;
+    color: rgb(106, 102, 109);
+}
+
+.page_t {
+    border: 3px solid #CE8484;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+}
+
+.page_e {
+    border: 3px solid #CE8484;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+}
+
+.li_box {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+h1 {
+    color: #CE8484;
+}
+
+.btn {
+    color: #ffff;
+    text-align: center;
+    cursor: pointer;
+    background-color: #CE8484;
+    border: 1px solid #CE8484;
+}
+
+
+
+.category_box {   
+    width: 400px;
+    height: 60px;
+    border: 3px solid #CE8484;
+    border-radius: 10px;
+}
+
+
+label {
+    color: #3B0B0B;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+.form-text {
+    justify-content: right;
+}
+
+.form-group{
+
+    flex-direction: column;
+
+}
