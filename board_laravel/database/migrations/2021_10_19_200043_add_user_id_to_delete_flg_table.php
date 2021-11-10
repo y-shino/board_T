@@ -14,7 +14,7 @@ class AddUserIdToDeleteFlgTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->tinyinteger('delete_flg')->after('remember_token');
+            $table->tinyinteger('delete_flg')->nullable()->default(null)->after('remember_token');
         });
     }
 
