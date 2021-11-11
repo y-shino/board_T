@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use\App\Models\Thread;
+use App\Models\Category;
 
 class ThreadController extends Controller
 {
@@ -16,8 +16,9 @@ class ThreadController extends Controller
      */
     public function index(Request $request)
     {
-        //$comments = Category::find($request->id)->comments()->get(); 
-       $comments = [];
+        $comments = Category::find($request->id)->comments()->get(); 
+      
+
        return view('threads.index',['comments'=>$comments]);
     }
 }

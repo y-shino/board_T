@@ -10,4 +10,9 @@ class Category extends Model
     use HasFactory;
     protected $table = 'category';
     public $timestamps = false;
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
