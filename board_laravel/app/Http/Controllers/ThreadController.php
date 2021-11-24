@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Comment;
@@ -34,7 +35,7 @@ class ThreadController extends Controller
         $comment = $request->input('comment');
 
         Comment::create([
-            'user_id' => 1,
+            'user_id' => Auth::id(),
             'category_id' => $request->category_id,
             'comment' => $comment
         ]);

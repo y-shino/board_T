@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style.css">
-    <title>投稿一覧画面</title>
-</head>
-<body>
+
+@extends('layouts.app')
+@section('content')
 @if (count($categories) > 0)
 
     <form action="category.blade.php" method="get" >
@@ -48,5 +41,9 @@
         </ul>
     </nav>
 @endif
-</body>
-</html>
+    <div class="mt-4 mb-4">
+        <a href="{{ route('category-add') }}" class="btn btn-primary">
+            新しい部屋の作成
+        </a>
+    </div>
+@endsection
