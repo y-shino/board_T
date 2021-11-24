@@ -8,7 +8,8 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    //
+
+    //投稿画面一覧
 
     public function category(Request $request)
     {
@@ -18,6 +19,8 @@ class CategoryController extends Controller
         ]);
     }
 
+    //スレッド作成画面
+
     public function category_add(Request $request)
     {
         $categories = Category::all();
@@ -26,6 +29,8 @@ class CategoryController extends Controller
         ]);
     }
 
+    //スレッド作成画面から投稿画面へ
+    
     public function add(Request $request)
     {
         $category = new Category;

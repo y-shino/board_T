@@ -13,8 +13,9 @@ a {
 }
 
 .title {
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: bold;
+    color: #3B0B0B;
 }
 
 .ex {
@@ -133,4 +134,32 @@ label {
 
     flex-direction: column;
 
+}
+
+.mypage{
+    border: 3px solid #CE8484;
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.profile{
+    width: 400px;
+    text-align: start;
+    color: #3B0B0B;
+    margin: 50px;
+}
+
+.icon img{
+    border-radius: 60px;
+    margin: 30px auto 10px;
+    max-width: 300px;
+}
+
+.mypage a img{
+    width: 100%;
+    max-width: 60px;
 }
