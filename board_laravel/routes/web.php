@@ -27,7 +27,7 @@ Route::post('/category', [App\Http\Controllers\CategoryController::class, 'categ
 Route::get('/category-add', [App\Http\Controllers\CategoryController::class, 'category_add'])->name('category-add');
 Route::post('/add', [App\Http\Controllers\CategoryController::class, 'add'])->name('add');
 Route::get('/threads/{id}', [App\Http\Controllers\ThreadController::class, 'index'])->name('threads/{id}');
-Route::get('/mypage/{id}', [App\Http\Controllers\UsersController::class, 'mypage'])->name('mypage/{id}');
 Route::get('/threads/{id}', [App\Http\Controllers\ThreadController::class, 'index'])->name('threads');
 Route::post('/threads', [App\Http\Controllers\ThreadController::class,'create']);
+Route::get('/mypage/{id}', [App\Http\Controllers\UsersController::class, 'mypage'])->name('mypage/{id}');
 

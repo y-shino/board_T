@@ -11,15 +11,13 @@ use App\Models\Category;
 class CategoryController extends Controller
 {
 
-    //投稿画面一覧
-
     //middlewareによる認証制限を追加
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-
+    //投稿画面一覧
     public function category(Request $request)
     {
         $categories = Category::all();
