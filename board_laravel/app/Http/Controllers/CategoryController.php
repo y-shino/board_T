@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Http\Request;
 
 use App\Models\Category;
@@ -10,6 +12,13 @@ class CategoryController extends Controller
 {
 
     //投稿画面一覧
+
+    //middlewareによる認証制限を追加
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 
     public function category(Request $request)
     {

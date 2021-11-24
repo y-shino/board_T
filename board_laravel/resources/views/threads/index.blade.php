@@ -52,8 +52,30 @@
          </tbody>
      </table>
  </div>
+
+    @if($errors->any())
+    <h2>エラーメッセージ</h2>
+    <ul>
+        @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+    @endif
+    <h2>フォーム</h2>
+    <form action="/threads" method="POST">
+        <input type="hidden" name="category_id" value="{{ $category_id }}">
+        名前:<br>
+        <input name="name">
+        <br>
+        コメント:<br>
+        <textarea name="comment" rows="4" cols="40"></textarea>
+        <br>
+        {{ csrf_field() }}
+        <button class="btn btn-success"> 送信 </button>
+    </form>
+
+
  @endsection
  @endif
 
- 
  
