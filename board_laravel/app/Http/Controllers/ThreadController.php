@@ -13,11 +13,13 @@ class ThreadController extends Controller
     // Indexページの表示
     public function index(Request $request)
     {
-        $comments = Category::find($request->id)->comments()->get(); 
-      
+        $category = Category::find($request->id); 
+        $comments = $category->comments()->get(); 
+
 
         return view('threads.index',[
             'category_id'=>$request->id,
+            'category'=>$category,
             'comments'=>$comments
         ]);
     }

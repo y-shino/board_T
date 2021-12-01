@@ -11,7 +11,7 @@
  
             <!-- テーブルヘッダ -->
             <thead>
-                <th>掲示板</th>
+                <th>{{ $category->name }}</th>
                 <th>&nbsp;</th>
             </thead>
 
