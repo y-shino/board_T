@@ -16,10 +16,11 @@
                 </div>
                 <div class="title">{{ $user->name }}</div>
                 <div class="profile">{{ $user->profile }}</div>
-            @endforeach
-            <a href="">
-                <img src="../storage/images/DM.png" alt="" >
+
+            <a href="/edit?id={{ $user->id }}">
+                <img src="../storage/images/edit.png" alt="" >
             </a>
+            @endforeach
         </div>
     @endif
 </body>
