@@ -13,7 +13,7 @@
 
     @foreach ($categories as $category)
         <div class="link_box">
-            <a href="" class="title">{{ $category->name }}</a><br>
+            <a href="{{ route('threads', ['id' => $category->id ]) }}" class="title">{{ $category->name }}</a><br>
             <span class="ex"> {{ $category->comment }}</span>
         </div>
 

@@ -3,7 +3,6 @@
 @section('content')
  
 <!-- コメント一覧表示 -->
-@if (count($comments) > 0)
 <div class="panel panel-default">
     <div class="panel-heading">
     </div>
@@ -15,8 +14,8 @@
                 <th>掲示板</th>
                 <th>&nbsp;</th>
             </thead>
-            
- 
+
+
  @section('title', 'board_larabel 投稿の一覧ページ')
  @section('keywords', 'キーワード1,キーワード2,キーワード3')
  @section('description', '投稿一覧ページの説明文')
@@ -32,7 +31,6 @@
          <thead>
          <tr>
              <th>ID</th>
-             <th>カテゴリ</th>
              <th>作成日時</th>
              <th>名前</th>
              <th>メッセージ</th>
@@ -42,7 +40,6 @@
          @foreach ($comments as $comment)
              <tr>
                  <td>{{ $comment->id }}</td>
-                 <td>{{ $comment->category->name }}</td>  
                  <td>{{ $comment->created_at->format('Y.m.d') }}</td>
                  <td>{{ $comment->user->name }}</td>
                  <td>{!! nl2br(e(Str::limit($comment->comment, 1000))) !!}
@@ -76,6 +73,6 @@
 
 
  @endsection
- @endif
+
 
  

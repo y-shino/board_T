@@ -4,12 +4,13 @@ a {
 }
 .link_box {
     width: 500px;
-    height: 60px;
+    height: 90px;
     border: 3px solid #CE8484;
     border-radius: 10px;
     padding: 25px 40px;
     margin: 15px auto;
     color: #3B0B0B;
+    padding: 10px;
 }
 
 .title {
