@@ -58,7 +58,7 @@
         @endforeach
     </ul>
     @endif
-    <h2>フォーム</h2>
+    <h2>コメント</h2>
     <form action="/threads" method="POST">
         <input type="hidden" name="category_id" value="{{ $category_id }}">
         名前:<br>
@@ -68,7 +68,7 @@
         <textarea name="comment" rows="4" cols="40"></textarea>
         <br>
         {{ csrf_field() }}
-        <button class="btn btn-success"> 送信 </button>
+        <button class="btn btn-success"> コメント </button>
     </form>
 
 
