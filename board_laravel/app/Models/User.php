@@ -45,6 +45,6 @@ class User extends Authenticatable
     ];
     public function likes()
     {
-        return $this->belongsToMany(Comment::class)->withTimestamps();
+        return $this->belongsToMany(Comment::class);
     }
 }

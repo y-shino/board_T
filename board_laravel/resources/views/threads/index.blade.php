@@ -46,7 +46,7 @@
                   </td>
              </tr>
              <div class="row justify-content-center">
-             @if($comment->likes()->where('user_id', Auth::id())->exists())
+             @if($comment->users()->where('user_id', Auth::id())->exists())
                         <div class="col-md-3">
                             <form action="{{ route('unlikes', $comment) }}" method="Post">
                                 @csrf
@@ -61,7 +61,7 @@
                             </form>
                         </div>
                         <div class="row justify-content-center">
-                            <p>いいね数：{{ $post->users()->count() }}</p>
+                            <p>いいね数：{{ $comment->users()->count() }}</p>
                         </div>
              @endif
          @endforeach
