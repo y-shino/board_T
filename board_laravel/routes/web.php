@@ -32,3 +32,6 @@ Route::get('/mypage/{id}', [App\Http\Controllers\UsersController::class, 'mypage
 
 Route::get('edit', [App\Http\Controllers\UsersController::class, 'edit'])->name('edit');
 Route::post('edit', [App\Http\Controllers\UsersController::class, 'koushin'])->name('koushin');
+
+Route::post('posts/{post}/likes', 'LikeController@store')->name('likes');
+Route::post('posts/{post}/unlikes', 'LikeController@destroy')->name('unlikes');

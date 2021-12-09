@@ -18,6 +18,11 @@ class CreateLikesTable extends Migration
             $table->integer('user_id');
             $table->integer('comment_id');
             $table->string('type',256);
+
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->foreign('comment_id')->references('id')->on('comments')->onDelete('cascade');
+
+            $table->unique(['user_id', 'comment_id']);
         });
     }
 
