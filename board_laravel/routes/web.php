@@ -30,5 +30,5 @@ Route::get('/threads/{id}', [App\Http\Controllers\ThreadController::class, 'inde
 Route::post('/threads', [App\Http\Controllers\ThreadController::class,'create']);
 Route::get('/mypage/{id}', [App\Http\Controllers\UsersController::class, 'mypage'])->name('mypage/{id}');
 
-Route::get('edit', [App\Http\Controllers\UsersController::class, 'edit'])->name('edit');
-Route::post('edit', [App\Http\Controllers\UsersController::class, 'koushin'])->name('koushin');
+Route::get('/edit', [App\Http\Controllers\UsersController::class, 'edit'])->name('edit');
+Route::post('/edit', [App\Http\Controllers\UsersController::class, 'koushin'])->name('koushin');

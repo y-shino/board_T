@@ -1,32 +1,34 @@
+@extends('layouts.app')
+ 
 @section('content')
+
 <div class="">
 
 
-    <!-- 新タスクフォーム -->
-    <form action="{{ route('koushin') }}" method="POST" class="form-horizontal">
+    <!-- プロフィール編集画面 -->
+    <form action="{{ route('koushin') }}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
       
-        <!-- タスク名 -->
-        <div class="form-group">
 
-            <div class="col-sm-6">
-                <img src="" alt="">
+        <div class="mypage">
+                    <input type="hidden" name="id" value="{{ $user->id }}">
+            <div class="icon">
+            <img src="{!! asset('storage/upload/' .$user->image_name)!!}" alt="">
             </div>
-            <div class="col-sm-6">
-                <input type="file" name="image_name" id="user-name" class="form-control" value='ファイルを選択'>
+            <div class="form-file">
+                <label for="user-image_name" class="">ファイルを選択</label>
+                <input type="file" name="image_name" id="user-image_name" class="form-filetext" value='ファイルを選択'>
             </div>
-            <div class="col-sm-6">
-                <input type="text" name="name" id="user-name" class="form-control" placeholder='ニックネーム' value="{{ $user->name }}">
+            <div class="form-text">
+                <input type="text" name="name" id="user-name"  placeholder='ニックネーム' value="{{ $user->name }}">
             </div>
-            <div class="col-sm-6">
-                <input type="text" name="profile" id="user-profile" class="form-control" placeholder='自己紹介文' value="{{ $user->profile }}">
+            <div class="form-text">
+                <input type="text" name="profile" id="user-profile"  placeholder='自己紹介文' value="{{ $user->profile }}" wordwrap="soft">
             </div>
-
             <div>
-                <!-- タスク追加ボタン -->
-                <input type="submit" value="更新" class="btn-g">
-            </div>
-
+                <!-- 更新ボタン -->
+                <input type="submit" value="更新" class="btn">
+            </div> 
 
 
         </div>
@@ -34,3 +36,5 @@
         @csrf
 
     </form>
+</div>
+@endsection
