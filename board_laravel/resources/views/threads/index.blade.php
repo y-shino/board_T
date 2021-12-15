@@ -45,11 +45,30 @@
                  <td>{!! nl2br(e(Str::limit($comment->comment, 1000))) !!}
                   </td>
              </tr>
+             <div class="row justify-content-center">
+             @if($comment->users()->where('user_id', Auth::id())->exists())
+                        <div class="col-md-3">
+                            <form action="{{ route('unlikes', $comment) }}" method="Post">
+                                @csrf
+                                <input type="submit" value="&#xf164;いいね取り消す" class="fas btn btn-danger">
+                            </form>
+                        </div>
+             @else
+                        <div class="col-md-3">
+                            <form action="{{ route('likes', $comment) }}" method="Post">
+                                @csrf
+                                <input type="submit" value="&#xf164;いいね" class="fas btn btn-success">
+                            </form>
+                        </div>
+                        <div class="row justify-content-center">
+                            <p>いいね数：{{ $comment->users()->count() }}</p>
+                        </div>
+             @endif
          @endforeach
          </tbody>
      </table>
  </div>
-
+</div>
     @if($errors->any())
     <h2>エラーメッセージ</h2>
     <ul>
