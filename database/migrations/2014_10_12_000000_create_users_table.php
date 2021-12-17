@@ -13,10 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     { 
-        // 対象の存在をしていれば、処理を中断する
-        if(Schema::hasTable('users')){
-            return;
-        }
+
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
