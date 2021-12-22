@@ -2437,9 +2437,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
+  background-color: #CE8484;
   color: #fff;
-  background-color: #3490dc;
-  border-color: #3490dc;
+  display: table;
+  margin: 0 auto;
+  font-size: 16px;
+  border: none;
+  -webkit-appearance: none;
 }
 .btn-primary:hover {
   color: #fff;
@@ -2500,6 +2504,12 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #38c172;
   border-color: #38c172;
+}
+.btn-submit {
+  color: #fff;
+  background-color: #CE8484;
+  border-color: #CE8484;
+
 }
 .btn-success:hover {
   color: #fff;
