@@ -16104,3 +16104,19 @@ readers do not read off random characters that represent icons */
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
+
+.back-button {
+  width: 250px;
+    color: black;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    font-size: 16;
+    padding: 15px;
+    border-radius: 100vh;
+    /* border: none; */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}

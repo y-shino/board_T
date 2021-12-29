@@ -32,6 +32,8 @@
                     </table>
 
                     <input class="form-submit" type="submit" value="作成" />
+                    <br>
+                    <button type="button" onClick="history.back()" class="back-button">戻る</button>
                 </form>
             </div>
             @csrf
