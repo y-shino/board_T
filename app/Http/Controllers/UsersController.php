@@ -10,6 +10,12 @@ class UsersController extends Controller
 
 {
 
+    //middlewareによる認証制限を追加
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     //投稿画面一覧
 
     public function mypage(Request $request)
