@@ -22,10 +22,10 @@
  @section('pageCss')
  <link href="/css/bbs/style.css" rel="stylesheet">
  @endsection
-  
- 
-  
- @section('content')
+
+
+
+@section('content')
  <div class="table-responsive">
      <table class="table table-hover">
          <thead>
@@ -79,16 +79,17 @@
     @endif
     <h2>コメント</h2>
     <form action="/threads" method="POST">
-        <input type="hidden" name="category_id" value="{{ $category_id }}">
-        名前:<br>
-        <input name="name">
         <br>
-        コメント:<br>
-        <textarea name="comment" rows="4" cols="40"></textarea>
-        <br>
+        <tr>
+            <th>コメント:</th>
+            <td class="comment-body">
+                <textarea name="comment" rows="4" cols="40"></textarea>
+            </td>
+        </tr>
         {{ csrf_field() }}
-        <button class="btn btn-success"> コメント </button>
+        <br><button class="btn btn-submit"> コメント </button>
     </form>
+    <button type="button" onClick="history.back()" class="back-button">戻る</button>
 
 
  @endsection
